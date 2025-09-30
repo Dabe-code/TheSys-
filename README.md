@@ -1,2 +1,2 @@
-# TheSys-
+# TheSys
 Thesis Management System
