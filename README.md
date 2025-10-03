@@ -15,6 +15,165 @@ Thesis Management System
 
 TheSys is a Thesis Management System built with Laravel. This application helps manage thesis projects, student submissions, and academic workflows.
 
+## Requirements
+
+-   PHP >= 8.2
+-   Composer
+-   SQLite (included) or MySQL/PostgreSQL
+-   Node.js & npm (for frontend assets)
+
+## Installation & Setup
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/Dabe-code/TheSys-.git
+    cd Laravel-TheSys
+    ```
+
+2. **Install PHP dependencies:**
+
+    ```bash
+    composer install
+    ```
+
+3. **Install Node.js dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+4. **Copy environment file:**
+
+    ```bash
+    cp .env.example .env
+    ```
+
+5. **Generate application key:**
+
+    ```bash
+    php artisan key:generate
+    ```
+
+6. **Run database migrations:**
+
+    ```bash
+    php artisan migrate
+    ```
+
+7. **Seed the database (optional):**
+    ```bash
+    php artisan db:seed
+    ```
+
+## Running the Application
+
+### Development Server
+
+Start the Laravel development server:
+
+```bash
+php artisan serve
+```
+
+The application will be available at `http://localhost:8000`
+
+### Compile Assets
+
+For development (with hot reloading):
+
+```bash
+npm run dev
+```
+
+For production:
+
+```bash
+npm run build
+```
+
+### Running Tests
+
+Execute the test suite:
+
+```bash
+php artisan test
+```
+
+Or using PHPUnit directly:
+
+```bash
+./vendor/bin/phpunit
+```
+
+## Project Structure
+
+```
+Laravel-TheSys/
+├── app/                    # Application core
+│   ├── Http/              # HTTP layer (Controllers, Middleware, Requests)
+│   │   └── Controllers/   # Application controllers
+│   ├── Models/            # Eloquent models
+│   └── Providers/         # Service providers
+├── bootstrap/             # Application bootstrap files
+├── config/                # Configuration files
+├── database/              # Database files
+│   ├── factories/         # Model factories
+│   ├── migrations/        # Database migrations
+│   ├── seeders/          # Database seeders
+│   └── database.sqlite   # SQLite database file
+├── public/                # Public web files
+├── resources/             # Views, CSS, JS, and other assets
+│   ├── css/              # Stylesheets
+│   ├── js/               # JavaScript files
+│   └── views/            # Blade templates
+├── routes/                # Route definitions
+├── storage/               # Application storage
+│   ├── app/              # Application files
+│   ├── framework/        # Framework files
+│   └── logs/             # Application logs
+├── tests/                 # Test files
+│   ├── Feature/          # Feature tests
+│   └── Unit/             # Unit tests
+├── vendor/                # Composer dependencies
+├── .env                   # Environment configuration
+├── artisan               # Artisan command-line tool
+├── composer.json         # Composer dependencies
+├── package.json          # Node.js dependencies
+└── README.md             # This file
+```
+
+## Common Artisan Commands
+
+```bash
+# Clear application cache
+php artisan cache:clear
+
+# Clear configuration cache
+php artisan config:clear
+
+# Create a new controller
+php artisan make:controller ControllerName
+
+# Create a new model
+php artisan make:model ModelName
+
+# Create a new migration
+php artisan make:migration create_table_name
+
+# Run migrations
+php artisan migrate
+
+# Rollback migrations
+php artisan migrate:rollback
+
+# Create a new seeder
+php artisan make:seeder SeederName
+
+# Run database seeders
+php artisan db:seed
+```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
