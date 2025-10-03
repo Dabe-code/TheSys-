@@ -174,55 +174,103 @@ php artisan make:seeder SeederName
 php artisan db:seed
 ```
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
--   **[Vehikl](https://vehikl.com)**
--   **[Tighten Co.](https://tighten.co)**
--   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
--   **[64 Robots](https://64robots.com)**
--   **[Curotec](https://www.curotec.com/services/technologies/laravel)**
--   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
--   **[Redberry](https://redberry.international/laravel-development)**
--   **[Active Logic](https://activelogic.com)**
-
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+We welcome contributions to TheSys! Follow these steps to contribute to the project:
 
-## Code of Conduct
+### Setting Up for Development
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. **Fork the repository**
 
-## Security Vulnerabilities
+    - Go to [https://github.com/Dabe-code/TheSys-](https://github.com/Dabe-code/TheSys-)
+    - Click the "Fork" button in the top right corner
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2. **Clone your fork**
 
-## License
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/TheSys-.git
+    cd Laravel-TheSys
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3. **Add the original repository as upstream**
+
+    ```bash
+    git remote add upstream https://github.com/Dabe-code/TheSys-.git
+    ```
+
+4. **Set up the development environment**
+   Follow the installation steps in this README
+
+### Git Workflow
+
+1. **Keep your fork updated**
+
+    ```bash
+    git fetch upstream
+    git checkout main
+    git merge upstream/main
+    ```
+
+2. **Create a new branch for your feature/fix**
+
+    ```bash
+    git checkout -b feature/your-feature-name
+    # or
+    git checkout -b fix/issue-description
+    ```
+
+3. **Make your changes**
+
+    - Write clean, well-documented code
+    - Follow Laravel coding standards
+    - Add tests for new functionality
+
+4. **Commit your changes**
+
+    ```bash
+    git add .
+    git commit -m "Add descriptive commit message"
+    ```
+
+5. **Push to your fork**
+
+    ```bash
+    git push origin feature/your-feature-name
+    ```
+
+6. **Create a Pull Request**
+    - Go to your fork on GitHub
+    - Click "New Pull Request"
+    - Select your feature branch
+    - Add a clear title and description
+
+### Contribution Guidelines
+
+-   **Code Style**: Follow PSR-12 coding standards
+-   **Testing**: Ensure all tests pass (`php artisan test`)
+-   **Documentation**: Update documentation for new features
+-   **Commit Messages**: Use clear, descriptive commit messages
+-   **Branch Naming**:
+    -   Features: `feature/feature-name`
+    -   Bug fixes: `fix/issue-description`
+    -   Documentation: `docs/update-description`
+
+### Before Submitting
+
+1. **Run tests**
+
+    ```bash
+    php artisan test
+    ```
+
+2. **Check code style (if Pint is installed)**
+
+    ```bash
+    ./vendor/bin/pint
+    ```
+
+3. **Clear caches**
+    ```bash
+    php artisan cache:clear
+    php artisan config:clear
+    ```
